@@ -1,71 +1,89 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nabiya Banu - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <h2 class="logo">MyPortfolio</h2>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<div class="container">
+  <!-- Left side -->
+  <div class="left">
+    <img src="profile.jpg" alt="Nabiya Banu">
+    <h1>Nabiya Banu</h1>
+    <p>Computer Science Student | Data Science Enthusiast</p>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Hi, I'm <span>Your Name</span></h1>
-        <p>Aspiring Software Engineer | CSE Student</p>
-        <a href="#projects" class="btn">View Projects</a>
-    </section>
+    <div class="contact-links">
+      <a href="https://github.com/2907-debug" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+    </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I am a 2nd year Computer Science Engineering student passionate about 
-            building software and solving problems. I am currently learning Data 
-            Structures, Java, and Web Development.
-        </p>
-    </section>
+    <div class="nav-buttons">
+      <button onclick="showSection('about')">About Me</button>
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('experience')">Experience</button>
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="showSection('resume')">Resume</button>
+    </div>
+  </div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
+  <!-- Right side -->
+  <div class="right">
+    <div id="about" class="section active">
+      <h2>About Me</h2>
+      <p>Hello! I am Nabiya Banu, a second-year Computer Science student with a passion for Data Science and strong foundations in Python, NumPy, Matplotlib, Seaborn, and Java. I enjoy building small projects, analyzing datasets, and continuously learning new technologies. I am motivated to apply my skills in real-world engineering and data-driven problems.</p>
+    </div>
 
-        <div class="project-card">
-            <h3>Calculator</h3>
-            <p>Basic calculator using Java.</p>
-        </div>
+    <div id="skills" class="section">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Python: NumPy, Matplotlib, Seaborn, Google Colab</li>
+        <li>Java: Core Java, OOP, Problem Solving</li>
+        <li>Data Science: Exploratory Data Analysis, Basic ML concepts</li>
+        <li>Web Design</li>
+        <li>Operating System, DBMS, DCN, COA</li>
+        <li>Tools: Git & GitHub</li>
+      </ul>
+    </div>
 
-        <div class="project-card">
-            <h3>Bank Management System</h3>
-            <p>Multithreading project using wait() and notify().</p>
-        </div>
+    <div id="experience" class="section">
+      <h2>Experience</h2>
+      <p><strong>Marketing Intern</strong> — Small Organization (2 months)</p>
+      <ul>
+        <li>Gained teamwork and communication skills</li>
+        <li>Worked with data to analyze customer engagement trends</li>
+      </ul>
+    </div>
 
-        <div class="project-card">
-            <h3>Binary Search</h3>
-            <p>Efficient searching algorithm implementation.</p>
-        </div>
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Data Visualization Project:</strong> Python, Matplotlib & Seaborn, Google Colab</li>
+        <li><strong>Java Mini Project:</strong> Console-based OOP application</li>
+      </ul>
+    </div>
 
-    </section>
+    <div id="resume" class="section">
+      <h2>Resume</h2>
+      <p><strong>Education:</strong> B.Tech CSE, [Your College]</p>
+      <p><strong>Technical Skills:</strong> Python (NumPy, Matplotlib, Seaborn, Google Colab), Java, Data Science basics, Web Design, OS, DBMS, DCN, COA</p>
+      <p><strong>Experience:</strong> Marketing Intern — Small Org, 2 months</p>
+      <p><strong>Projects:</strong> Data Visualization Project, Java Mini Project</p>
+      <p><a href="Nabiya_Resume.pdf" target="_blank" class="resume-link">Download Resume (PDF)</a></p>
+    </div>
+  </div>
+</div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Your Name | All Rights Reserved</p>
-    </footer>
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    const selected = document.getElementById(id);
+    selected.classList.add('active');
+  }
+</script>
 
 </body>
+</html>
