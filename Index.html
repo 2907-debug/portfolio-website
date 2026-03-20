@@ -11,76 +11,124 @@
 <div class="container">
 
   <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="PHOTO.jpg.jpeg" alt="Nabiya">
+  <aside class="sidebar">
+    <img src="PHOTO.jpg.jpeg" alt="Nabiya Banu">
     <h2>Nabiya Banu</h2>
-    <p class="tag">CSE Student • Data Science</p>
+    <p class="tagline">CSE Student • Data Science Enthusiast</p>
 
-    <div class="links">
+    <div class="socials">
       <a href="https://github.com/2907-debug" target="_blank">GitHub</a>
       <a href="#">LinkedIn</a>
     </div>
-  </div>
+
+    <p class="status">Open to Internships</p>
+  </aside>
 
   <!-- Main Content -->
-  <div class="main">
+  <main class="main">
 
-    <!-- Navigation -->
-    <div class="nav">
-      <span onclick="showSection('about')">About</span>
-      <span onclick="showSection('skills')">Skills</span>
-      <span onclick="showSection('projects')">Projects</span>
-      <span onclick="showSection('resume')">Resume</span>
-    </div>
+    <!-- Navbar -->
+    <nav class="nav">
+      <span class="active" onclick="showSection('about', this)">About</span>
+      <span onclick="showSection('skills', this)">Skills</span>
+      <span onclick="showSection('projects', this)">Projects</span>
+      <span onclick="showSection('experience', this)">Experience</span>
+      <span onclick="showSection('resume', this)">Resume</span>
+    </nav>
 
-    <!-- Sections -->
-
-    <div id="about" class="section active">
+    <!-- About -->
+    <section id="about" class="section active">
       <h1>About Me</h1>
       <p>
-        I’m a Computer Science student passionate about Data Science and problem-solving. 
-        I enjoy working with data, building small projects, and continuously improving my technical skills.
+        I am a passionate Computer Science student with a strong interest in Data Science,
+        analytics, and real-world problem solving. I enjoy working with data, building
+        projects, and continuously upgrading my technical skills to stay industry-ready.
       </p>
-    </div>
 
-    <div id="skills" class="section">
+      <div class="grid">
+        <div class="card">🎓 Youth International Conference Participant</div>
+        <div class="card">🌍 Active Social Volunteer</div>
+        <div class="card">📊 Data Analysis & Visualization Enthusiast</div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
       <h1>Skills</h1>
-      <div class="cards">
-        <div class="card">Python, NumPy, Pandas</div>
-        <div class="card">Matplotlib, Seaborn</div>
+
+      <div class="grid">
+        <div class="card">Python (NumPy, Pandas)</div>
+        <div class="card">Matplotlib & Seaborn</div>
         <div class="card">Java (OOP)</div>
-        <div class="card">Web Design</div>
-        <div class="card">OS, DBMS, DCN, COA</div>
+        <div class="card">Web Design (HTML, CSS)</div>
+        <div class="card">Operating Systems</div>
+        <div class="card">DBMS</div>
+        <div class="card">DCN</div>
+        <div class="card">COA</div>
         <div class="card">Git & GitHub</div>
       </div>
-    </div>
+    </section>
 
-    <div id="projects" class="section">
+    <!-- Projects -->
+    <section id="projects" class="section">
       <h1>Projects</h1>
-      <div class="card">
-        <h3>Data Visualization</h3>
-        <p>Analyzed datasets using Python and created visual insights.</p>
+
+      <div class="project">
+        <h3>📊 Data Visualization Project</h3>
+        <p>
+          Conducted exploratory data analysis using Python and created meaningful
+          visualizations using Matplotlib and Seaborn to derive insights.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Java Mini Project</h3>
-        <p>Console-based application using OOP concepts.</p>
+      <div class="project">
+        <h3>💻 Java Mini Project</h3>
+        <p>
+          Developed a console-based application demonstrating object-oriented
+          programming concepts and logical problem-solving skills.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div id="resume" class="section">
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h1>Experience</h1>
+
+      <div class="project highlight">
+        <h3>Marketing Intern — MIA (Muslim Industrialists Association)</h3>
+        <p>Duration: 2 Months</p>
+
+        <ul>
+          <li>Contributed to Business Summit event coordination</li>
+          <li>Worked on outreach and promotional strategies</li>
+          <li>Collaborated with teams to improve engagement</li>
+          <li>Analyzed participation and audience response trends</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section">
       <h1>Resume</h1>
-      <p>B.Tech CSE | Strong in Python & Data Visualization</p>
-      <a href="Nabiya_Resume.pdf" class="btn" target="_blank">Download Resume</a>
-    </div>
 
-  </div>
+      <p><strong>B.Tech Computer Science Engineering</strong></p>
+      <p>Strong foundation in programming, data analysis, and core CS subjects.</p>
+
+      <a href="Nabiya_Resume.pdf" target="_blank" class="btn">
+        Download Resume
+      </a>
+    </section>
+
+  </main>
 </div>
 
 <script>
-function showSection(id) {
+function showSection(id, el) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.nav span').forEach(nav => nav.classList.remove('active'));
+  el.classList.add('active');
 }
 </script>
 
