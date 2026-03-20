@@ -14,45 +14,45 @@
   <aside class="sidebar">
     <img src="PHOTO.jpg.jpeg" alt="Nabiya Banu">
     <h2>Nabiya Banu</h2>
-    <p class="tagline">CSE Student • Data Science Enthusiast</p>
+    <p class="tagline">CSE Student • Data Analysis • Developer</p>
 
-    <div class="socials">
-      <a href="https://github.com/2907-debug" target="_blank">GitHub</a>
-      <a href="#">LinkedIn</a>
+    <div class="social-buttons">
+      <a href="https://github.com/2907-debug" target="_blank" class="social-btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/nabiyabanu6178" target="_blank" class="social-btn">LinkedIn</a>
     </div>
 
     <p class="status">Open to Internships</p>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="main">
 
-    <!-- Navbar -->
-    <nav class="nav">
-      <span class="active" onclick="showSection('about', this)">About</span>
-      <span onclick="showSection('skills', this)">Skills</span>
-      <span onclick="showSection('projects', this)">Projects</span>
-      <span onclick="showSection('experience', this)">Experience</span>
-      <span onclick="showSection('resume', this)">Resume</span>
-    </nav>
+    <!-- NAV BUTTONS -->
+    <div class="nav">
+      <button class="active-btn" onclick="showSection('about', this)">About</button>
+      <button onclick="showSection('skills', this)">Skills</button>
+      <button onclick="showSection('projects', this)">Projects</button>
+      <button onclick="showSection('experience', this)">Experience</button>
+      <button onclick="showSection('resume', this)">Resume</button>
+    </div>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="section active">
       <h1>About Me</h1>
       <p>
-        I am a passionate Computer Science student with a strong interest in Data Science,
-        analytics, and real-world problem solving. I enjoy working with data, building
-        projects, and continuously upgrading my technical skills to stay industry-ready.
+        I am a Computer Science student with strong interest in Data Analysis, software development,
+        and core computing concepts. While I have developed solid skills in data analysis and visualization,
+        I also focus on building a well-rounded foundation in programming, system design, and problem-solving.
       </p>
 
       <div class="grid">
+        <div class="card">📊 Strong in Data Analysis & Visualization</div>
         <div class="card">🎓 Youth International Conference Participant</div>
         <div class="card">🌍 Active Social Volunteer</div>
-        <div class="card">📊 Data Analysis & Visualization Enthusiast</div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section id="skills" class="section">
       <h1>Skills</h1>
 
@@ -66,31 +66,32 @@
         <div class="card">DCN</div>
         <div class="card">COA</div>
         <div class="card">Git & GitHub</div>
+        <div class="card">Google Colab</div>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <h1>Projects</h1>
 
       <div class="project">
         <h3>📊 Data Visualization Project</h3>
         <p>
-          Conducted exploratory data analysis using Python and created meaningful
-          visualizations using Matplotlib and Seaborn to derive insights.
+          Performed exploratory data analysis using Python and created meaningful visualizations
+          using Matplotlib and Seaborn to derive insights.
         </p>
       </div>
 
       <div class="project">
         <h3>💻 Java Mini Project</h3>
         <p>
-          Developed a console-based application demonstrating object-oriented
-          programming concepts and logical problem-solving skills.
+          Developed a console-based application demonstrating object-oriented programming
+          and problem-solving skills.
         </p>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <h1>Experience</h1>
 
@@ -99,20 +100,20 @@
         <p>Duration: 2 Months</p>
 
         <ul>
-          <li>Contributed to Business Summit event coordination</li>
+          <li>Contributed to Business Summit coordination</li>
           <li>Worked on outreach and promotional strategies</li>
-          <li>Collaborated with teams to improve engagement</li>
-          <li>Analyzed participation and audience response trends</li>
+          <li>Collaborated in team-based execution</li>
+          <li>Analyzed engagement and participation trends</li>
         </ul>
       </div>
     </section>
 
-    <!-- Resume -->
+    <!-- RESUME -->
     <section id="resume" class="section">
       <h1>Resume</h1>
 
       <p><strong>B.Tech Computer Science Engineering</strong></p>
-      <p>Strong foundation in programming, data analysis, and core CS subjects.</p>
+      <p>Strong in Data Analysis, Programming, and Core Computer Science subjects.</p>
 
       <a href="Nabiya_Resume.pdf" target="_blank" class="btn">
         Download Resume
@@ -123,12 +124,12 @@
 </div>
 
 <script>
-function showSection(id, el) {
+function showSection(id, btn) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
-  document.querySelectorAll('.nav span').forEach(nav => nav.classList.remove('active'));
-  el.classList.add('active');
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active-btn'));
+  btn.classList.add('active-btn');
 }
 </script>
 
